@@ -44,7 +44,7 @@ VHDL, CIF i GDS II.
 
 %build
 aclocal
-autoconf
+%{__autoconf}
 %configure
 
 %{__make} DEBUG="%{rpmcflags} -Wall"
