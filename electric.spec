@@ -1,13 +1,13 @@
 Summary:	Electric VLSI Design System
 Summary(pl):	System projektowania uk³adów VLSI
 Name:		electric
-Version:	6.08
-Release:	3
+Version:	7.00
+Release:	0.1
 License:	GPL v2
 Vendor:		Static Free Software
 Group:		Applications/Engineering
 Source0:	ftp://ftp.gnu.org/pub/gnu/electric/%{name}-%{version}.tar.gz
-# Source0-md5:	de428032f08d3d3ee8686f178ae6b160
+# Source0-md5:	64c89f820467b418d24ddf6c7e206c08
 Patch0:		%{name}-datadir.patch
 Patch1:		%{name}-tcl.patch
 Patch2:		%{name}-makefile.patch
@@ -66,7 +66,7 @@ install lib/*.txt $RPM_BUILD_ROOT%{_datadir}/electric
 # can't find better way to make electric find tcl.init
 ln -sf /usr/lib/tcl8.* $RPM_BUILD_ROOT%{_datadir}/electric/tcl
 
-install %{SOURCE1}	$RPM_BUILD_ROOT%{_desktopdir}
+#install %{SOURCE1}	$RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -76,4 +76,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README examples/samples.txt html/manual examples
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/electric
-%{_desktopdir}/%{name}.desktop
+#%{_desktopdir}/%{name}.desktop
