@@ -2,7 +2,7 @@ Summary:	Electric VLSI Design System
 Summary(pl):	System projektowania uk³adów VLSI
 Name:		electric
 Version:	6.08
-Release:	1
+Release:	3
 License:	GPL v2
 Vendor:		Static Free Software
 Group:		Applications/Engineering
@@ -55,8 +55,8 @@ VHDL, CIF i GDS II.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/electric,%{_desktopdir}}
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/electric}
 install electric $RPM_BUILD_ROOT%{_bindir}
 install lib/.cadrc $RPM_BUILD_ROOT%{_datadir}/electric
 install lib/*.help $RPM_BUILD_ROOT%{_datadir}/electric
@@ -66,6 +66,8 @@ install lib/*.txt $RPM_BUILD_ROOT%{_datadir}/electric
 # can't find better way to make electric find tcl.init
 ln -sf /usr/lib/tcl8.* $RPM_BUILD_ROOT%{_datadir}/electric/tcl
 
+install %{SOURCE1}	$RPM_BUILD_ROOT%{_desktopdir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -74,3 +76,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README examples/samples.txt html/manual examples
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/electric
+%{_desktopdir}/%{name}.desktop
