@@ -2,13 +2,15 @@ Summary:	Electric VLSI Design System
 Summary(pl):	System projektowania uk³adów VLSI
 Name:		electric
 Version:	6.06
-Release:	1
+Release:	2
 License:	GPL v2
 Vendor:		Static Free Software
 Group:		Applications/Engineering
 Source0:	ftp://ftp.gnu.org/pub/gnu/electric/%{name}-%{version}.tar.gz
 Patch0:		%{name}-datadir.patch
 Patch1:		%{name}-tcl.patch
+Patch2:		%{name}-makefile.patch
+Patch3:		%{name}-ac_fix.patch
 URL:		http://www.staticfreesoft.com/electric.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -41,6 +43,8 @@ VHDL, CIF i GDS II.
 %setup -q
 #%patch0 -p1
 #%patch1 -p1
+%patch2
+%patch3
 
 %build
 aclocal
@@ -62,14 +66,12 @@ install lib/*.txt $RPM_BUILD_ROOT%{_datadir}/electric
 # can't find better way to make electric find tcl.init
 ln -sf /usr/lib/tcl8.* $RPM_BUILD_ROOT%{_datadir}/electric/tcl
 
-gzip -9nf ChangeLog README examples/samples.txt
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz html/manual examples
+%doc ChangeLog README examples/samples.txt html/manual examples
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/electric
 %{_datadir}/electric/*
