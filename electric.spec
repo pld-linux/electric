@@ -33,7 +33,7 @@ to most popular CAD specifications including VHDL, CIF, and GDS II.
 %patch1 -p1
 
 %build
-%configure
+%configure2_13
 
 %{__make} DEBUG="%{rpmcflags} -Wall"
 
