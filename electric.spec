@@ -1,8 +1,8 @@
 Summary:	Electric VLSI Design System
 Summary(pl):	System projektowania uk³adów VLSI
 Name:		electric
-Version:	6.01
-Release:	3
+Version:	6.06
+Release:	1
 License:	GPL v2
 Vendor:		Static Free Software
 Group:		Applications/Engineering
@@ -39,15 +39,15 @@ VHDL, CIF i GDS II.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+#%patch0 -p1
+#%patch1 -p1
 
 %build
 aclocal
 %{__autoconf}
 %configure
 
-%{__make} DEBUG="%{rpmcflags} -Wall"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
