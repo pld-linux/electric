@@ -7,6 +7,7 @@ License:	GPL v2
 Vendor:		Static Free Software
 Group:		Applications/Engineering
 Source0:	ftp://ftp.gnu.org/pub/gnu/electric/%{name}-%{version}.tar.gz
+# Source0-md5:	17848541e74307e0a320b360765fd4d2
 Patch0:		%{name}-datadir.patch
 Patch1:		%{name}-tcl.patch
 Patch2:		%{name}-makefile.patch
