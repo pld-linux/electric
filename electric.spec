@@ -52,7 +52,7 @@ autoconf
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/electric} 
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/electric}
 install electric $RPM_BUILD_ROOT%{_bindir}
 install lib/.cadrc $RPM_BUILD_ROOT%{_datadir}/electric
 install lib/*.help $RPM_BUILD_ROOT%{_datadir}/electric
