@@ -1,0 +1,17 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=electric
+Comment=Electric VLSI Design System
+Comment[pl]=System projektowania uk³adóLSI
+Exec=electric
+Icon=electric.png
+Path=
+SwallowExec=
+SwallowTitle=
+Terminal=false
+TerminalOptions=
+Type=Application
+BinaryPattern=
+MapNotify=false
+Categories=Utility;X-Misc;Application;
+# vi: encoding=utf-8
