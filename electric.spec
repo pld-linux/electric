@@ -2,7 +2,7 @@ Summary:	Electric VLSI Design System
 Summary(pl):	System projektowania uk³adów VLSI
 Name:		electric
 Version:	6.01
-Release:	1
+Release:	2
 License:	GPL
 Vendor:		Static Free Software
 Group:		Applications/Engineering
@@ -13,6 +13,8 @@ Patch0:		%{name}-datadir.patch
 Patch1:		%{name}-tcl.patch
 BuildRequires:	lesstif-devel
 BuildRequires:	tcl-devel
+BuildRequires:	automake
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix	/usr/X11R6
@@ -33,7 +35,9 @@ to most popular CAD specifications including VHDL, CIF, and GDS II.
 %patch1 -p1
 
 %build
-%configure2_13
+aclocal
+autoconf
+%configure
 
 %{__make} DEBUG="%{rpmcflags} -Wall"
 
