@@ -29,6 +29,15 @@ A large set of tools is available including design-rule checkers,
 simulators, routers, layout generators, and more. Electric interfaces
 to most popular CAD specifications including VHDL, CIF, and GDS II.
 
+%description -l pl
+Electric s³u¿y do projektowania uk³adów MOS i bipolarnych, p³ytek
+drukowanych oraz dowolnych innych rodzajów uk³adów. Ma wiele styli
+edycji, w tym rozmieszczenia, schematyczny, specyfikacji architektury.
+
+Dostêpny jest du¿y zestaw narzêdzi, w tym symulatory, generatory itp.
+S± dostêpne interfejsy do wiêkszo¶ci popularnych formatów CAD, w tym
+VHDL, CIF i GDS II.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -45,14 +54,14 @@ autoconf
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/electric} 
-install electric $RPM_BUILD_ROOT/%{_bindir}
-install lib/.cadrc $RPM_BUILD_ROOT/%{_datadir}/electric
-install lib/*.help $RPM_BUILD_ROOT/%{_datadir}/electric
-install lib/*.mac $RPM_BUILD_ROOT/%{_datadir}/electric
-install lib/*.txt $RPM_BUILD_ROOT/%{_datadir}/electric
+install electric $RPM_BUILD_ROOT%{_bindir}
+install lib/.cadrc $RPM_BUILD_ROOT%{_datadir}/electric
+install lib/*.help $RPM_BUILD_ROOT%{_datadir}/electric
+install lib/*.mac $RPM_BUILD_ROOT%{_datadir}/electric
+install lib/*.txt $RPM_BUILD_ROOT%{_datadir}/electric
 
 # can't find better way to make electric find tcl.init
-ln -s /usr/lib/tcl8.* $RPM_BUILD_ROOT/%{_datadir}/electric/tcl
+ln -sf /usr/lib/tcl8.* $RPM_BUILD_ROOT%{_datadir}/electric/tcl
 
 %clean
 rm -rf $RPM_BUILD_ROOT
