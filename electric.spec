@@ -2,12 +2,13 @@ Summary:	Electric VLSI Design System
 Summary(pl):	System projektowania uk³adów VLSI
 Name:		electric
 Version:	6.08
-Release:	1
+Release:	2
 License:	GPL v2
 Vendor:		Static Free Software
 Group:		Applications/Engineering
 Source0:	ftp://ftp.gnu.org/pub/gnu/electric/%{name}-%{version}.tar.gz
 # Source0-md5:	de428032f08d3d3ee8686f178ae6b160
+Source1:	%{name}.desktop
 Patch0:		%{name}-datadir.patch
 Patch1:		%{name}-tcl.patch
 Patch2:		%{name}-makefile.patch
@@ -18,6 +19,9 @@ BuildRequires:	automake
 BuildRequires:	motif-devel
 BuildRequires:	tcl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_prefix		/usr/X11R6
+%define		_desktopdir	%{_applnkdir}/Scientific
 
 %description
 Electric designs MOS and bipolar integrated circuits,
@@ -55,8 +59,7 @@ VHDL, CIF i GDS II.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/electric}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/electric,%{_desktopdir}}
 install electric $RPM_BUILD_ROOT%{_bindir}
 install lib/.cadrc $RPM_BUILD_ROOT%{_datadir}/electric
 install lib/*.help $RPM_BUILD_ROOT%{_datadir}/electric
@@ -66,6 +69,8 @@ install lib/*.txt $RPM_BUILD_ROOT%{_datadir}/electric
 # can't find better way to make electric find tcl.init
 ln -sf /usr/lib/tcl8.* $RPM_BUILD_ROOT%{_datadir}/electric/tcl
 
+install %{SOURCE1}	$RPM_BUILD_ROOT%{_desktopdir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -74,3 +79,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README examples/samples.txt html/manual examples
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/electric
+%{_desktopdir}/%{name}.desktop
