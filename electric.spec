@@ -10,7 +10,9 @@ Group(de):	Applikationen/Ingenieurwesen
 Group(pl):	Aplikacje/In¿ynierskie
 Source0:	ftp://ftp.gnu.org/pub/electric/%{name}-%{version}.tar.gz
 Patch0:		%{name}-datadir.patch
+Patch1:		%{name}-tcl.patch
 BuildRequires:	lesstif-devel
+BuildRequires:	tcl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix	/usr/X11R6
@@ -28,6 +30,7 @@ to most popular CAD specifications including VHDL, CIF, and GDS II.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %configure
@@ -43,6 +46,9 @@ install lib/.cadrc $RPM_BUILD_ROOT/%{_datadir}/electric
 install lib/*.help $RPM_BUILD_ROOT/%{_datadir}/electric
 install lib/*.mac $RPM_BUILD_ROOT/%{_datadir}/electric
 install lib/*.txt $RPM_BUILD_ROOT/%{_datadir}/electric
+
+# can't find better way to make electric find tcl.init
+ln -s /usr/lib/tcl8.* $RPM_BUILD_ROOT/%{_datadir}/electric/tcl
 
 %clean
 rm -rf $RPM_BUILD_ROOT
