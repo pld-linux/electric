@@ -35,7 +35,7 @@ to most popular CAD specifications including VHDL, CIF, and GDS II.
 %build
 %configure
 
-%{__make} DEBUG="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS} -Wall"
+%{__make} DEBUG="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
