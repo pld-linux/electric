@@ -12,10 +12,10 @@ Source0:	ftp://ftp.gnu.org/pub/gnu/electric/%{name}-%{version}.tar.gz
 Patch0:		%{name}-datadir.patch
 Patch1:		%{name}-tcl.patch
 URL:		http://www.staticfreesoft.com/electric.html
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	lesstif-devel
 BuildRequires:	tcl-devel
-BuildRequires:	automake
-BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix	/usr/X11R6
