@@ -6,8 +6,6 @@ Release:	3
 License:	GPL v2
 Vendor:		Static Free Software
 Group:		Applications/Engineering
-Group(de):	Applikationen/Ingenieurwesen
-Group(pl):	Aplikacje/In¿ynierskie
 Source0:	ftp://ftp.gnu.org/pub/gnu/electric/%{name}-%{version}.tar.gz
 Patch0:		%{name}-datadir.patch
 Patch1:		%{name}-tcl.patch
