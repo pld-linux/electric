@@ -47,7 +47,7 @@ VHDL, CIF i GDS II.
 %patch3
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 
