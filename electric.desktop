@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=electric
 Comment=Electric VLSI Design System
-Comment[pl]=System projektowania uk³adóLSI
+Comment[pl]=System projektowania układów LSI
 Exec=electric
 Icon=electric.png
 Path=
