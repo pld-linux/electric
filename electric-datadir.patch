@@ -1,12 +1,12 @@
 diff -durN electric-6.01.orig/src/include/config.h electric-6.01/src/include/config.h
 --- electric-6.01.orig/src/include/config.h	Sat Jul 15 17:29:26 2000
 +++ electric-6.01/src/include/config.h	Thu Oct 12 18:36:34 2000
-@@ -93,7 +93,7 @@
- #  define DIRSEP           '/'						/* directory separator */
- #  define NONFILECH        '?'						/* character that cannot be in file name */
- #  define CADRCFILENAME    ".cadrc"					/* CAD startup file */
--#  define LIBDIR           "lib/"					/* location of library files */
-+#  define LIBDIR           "/usr/X11R6/share/electric/"			/* location of library files */
- #  define ESIMLOC          "/usr/local/bin/esim"
- #  define RSIMLOC          "/usr/local/bin/rsim"
- #  define PRESIMLOC        "/usr/local/bin/presim"
+@@ -157,7 +157,7 @@
+ #    define SFLATDRCLOC      x_("/usr/local/bin/findshort")
+ #    define u_int64_t uint64_t
+ #  else
+-#    define LIBDIR           x_("/usr/share/electric/lib/")	/* location of library files */
++#    define LIBDIR           x_("/usr/share/electric/")	/* location of library files */
+ #    define DOCDIR           x_("/usr/share/electric/doc/html/")	/* location of HTML files */
+ #    define ESIMLOC          x_("/usr/bin/esim")
+ #    define RSIMLOC          x_("/usr/bin/rsim")
