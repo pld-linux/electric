@@ -1,0 +1,12 @@
+--- configure.in.orig	Sat Jun 15 01:01:30 2002
++++ configure.in	Sun Aug 11 22:28:01 2002
+@@ -47,8 +47,7 @@
+ AC_FUNC_VPRINTF
+ AC_CHECK_FUNCS(ftime getcwd gethostid getpagesize gettimeofday getwd qsort scandir setlocale strstr strchr valloc vsnprintf)
+ 
+-PTHREAD_LIBS=-lpthread
+-ACX_PTHREAD()
++AC_CHECK_PTH(1.4.0,,,no,AC_DEFINE(HAVE_PTHREAD))
+ 
+ dnl Figure out how to reference 64-bit unsigned integers
+ AC_CHECK_TYPE(u_int64_t, long long)
