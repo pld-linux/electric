@@ -18,7 +18,6 @@ BuildRequires:	lesstif-devel
 BuildRequires:	tcl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix	/usr/X11R6
 
 %description
 Electric designs MOS and bipolar integrated circuits,
