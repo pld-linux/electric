@@ -3,11 +3,11 @@ Summary(pl):	System projektowania uk³adów VLSI
 Name:		electric
 Version:	6.01
 Release:	1
+License:	GPL
+Vendor:		Static Free Software
 Group:		Applications/Engineering
 Group(de):	Applikationen/Ingenieurwesen
 Group(pl):	Aplikacje/In¿ynierskie
-License:	GPL
-Vendor:		Static Free Software
 Source0:	ftp://ftp.gnu.org/pub/electric/%{name}-%{version}.tar.gz
 Patch0:		%{name}-datadir.patch
 BuildRequires:	lesstif-devel
