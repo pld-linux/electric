@@ -2,7 +2,7 @@ Summary:	Electric VLSI Design System
 Summary(pl):	System projektowania uk³adów VLSI
 Name:		electric
 Version:	6.08
-Release:	2
+Release:	3
 License:	GPL v2
 Vendor:		Static Free Software
 Group:		Applications/Engineering
@@ -18,10 +18,11 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	motif-devel
 BuildRequires:	tcl-devel
+Conflicts:	applnk < 1.5.18
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
-%define		_desktopdir	%{_applnkdir}/Scientific
+%define		_desktopdir	%{_applnkdir}/Scientific/Engineering
 
 %description
 Electric designs MOS and bipolar integrated circuits,
