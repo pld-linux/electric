@@ -8,7 +8,7 @@ Vendor:		Static Free Software
 Group:		Applications/Engineering
 Group(de):	Applikationen/Ingenieurwesen
 Group(pl):	Aplikacje/In¿ynierskie
-Source0:	ftp://ftp.gnu.org/pub/electric/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnu.org/pub/gnu/electric/%{name}-%{version}.tar.gz
 Patch0:		%{name}-datadir.patch
 Patch1:		%{name}-tcl.patch
 BuildRequires:	lesstif-devel
