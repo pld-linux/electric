@@ -77,4 +77,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README examples/samples.txt html/manual examples
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/electric
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
