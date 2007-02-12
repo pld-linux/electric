@@ -1,5 +1,5 @@
 Summary:	Electric VLSI Design System
-Summary(pl):	System projektowania uk³adów VLSI
+Summary(pl.UTF-8):   System projektowania ukÅ‚adÃ³w VLSI
 Name:		electric
 Version:	7.00
 Release:	0.2
@@ -30,13 +30,13 @@ A large set of tools is available including design-rule checkers,
 simulators, routers, layout generators, and more. Electric interfaces
 to most popular CAD specifications including VHDL, CIF, and GDS II.
 
-%description -l pl
-Electric s³u¿y do projektowania uk³adów MOS i bipolarnych, p³ytek
-drukowanych oraz dowolnych innych rodzajów uk³adów. Ma wiele styli
+%description -l pl.UTF-8
+Electric sÅ‚uÅ¼y do projektowania ukÅ‚adÃ³w MOS i bipolarnych, pÅ‚ytek
+drukowanych oraz dowolnych innych rodzajÃ³w ukÅ‚adÃ³w. Ma wiele styli
 edycji, w tym rozmieszczenia, schematyczny, specyfikacji architektury.
 
-Dostêpny jest du¿y zestaw narzêdzi, w tym symulatory, generatory itp.
-S± dostêpne interfejsy do wiêkszo¶ci popularnych formatów CAD, w tym
+DostÄ™pny jest duÅ¼y zestaw narzÄ™dzi, w tym symulatory, generatory itp.
+SÄ… dostÄ™pne interfejsy do wiÄ™kszoÅ›ci popularnych formatÃ³w CAD, w tym
 VHDL, CIF i GDS II.
 
 %prep
