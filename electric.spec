@@ -1,5 +1,5 @@
 Summary:	Electric VLSI Design System
-Summary(pl.UTF-8):   System projektowania układów VLSI
+Summary(pl.UTF-8):	System projektowania układów VLSI
 Name:		electric
 Version:	7.00
 Release:	0.2
