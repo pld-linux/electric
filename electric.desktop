@@ -1,5 +1,4 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=electric
 Comment=Electric VLSI Design System
 Comment[pl]=System projektowania układów LSI
@@ -12,6 +11,5 @@ Terminal=false
 TerminalOptions=
 Type=Application
 BinaryPattern=
-MapNotify=false
 Categories=Utility;Electronics;
 # vi: encoding=utf-8
